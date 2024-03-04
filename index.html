@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts.css">
+    <title>Pokedex</title>
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="initialize()">
+    <header> 
+        <h1>POKEDEX</h1> 
+        <input type="text" id="searchInput" placeholder="Search Pokemon by name">
+        <button onclick="searchPokemon()">Search</button>
+        </header>
+    <div id="pokedex"></div>
+    <div class="modal-overlay" onclick="hideDetailedPokemon()"></div>
+
+    <div class="infoContainer" id="detailedPokemon">
+        <span id="closeButton" onclick="hideDetailedPokemon()">X</span>
+        <div id="detailedName"></div>
+        <div class="middleRow">
+            <div id="typeMid">test</div>
+            <div class="middleRowInner">
+                <button class="btnPokemon" onclick="prevPokemon()"> < </button>
+                <img id="detailedImage"><img id="pokeballImage">
+                <button class="btnPokemon" onclick="nextPokemon()"> > </button>
+            </div>
+        </div>
+        <div id="buttonRows">
+            <button id="about" class="myButton" onclick="aboutBtn()">About</button>
+            <button id="moves" class="myButton" onclick="movesBtn()">Moves</button>
+            <button id="stats" class="myButton" onclick="statsBtn()">Stats</button>
+        </div>
+        <div id="detailedInfo">
+            <div id="pokemonAbout"></div>
+            <div id="pokemonMoves"></div>
+            <div id="pokemonStats"></div>
+        </div>
+    </div>
+    <footer><button id="loadMoreButton" class="myButton" onclick="loadMorePokemon()">Load More Pokemon</button></footer>
+</body>
+</html>
